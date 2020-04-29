@@ -9,7 +9,7 @@ Provides a typeAlias for a matrix of Strings.
 func answer(for words: [String]) -> Crossword
 ```
 
-Usable with a light weight syntax: 
+**light weight syntax:**
 
 ```Swift
 let crossword = [
