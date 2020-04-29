@@ -1,7 +1,10 @@
 # Crossword
-A crossword puzzle algorithm for the (S N A P interview)
+## A crossword puzzle algorithm for the (S N A P interview)
 
-Provides a typeAlias for a matrix of Strings.  
+**Provides a typealias for a matrix of Strings.**  
+
+```Swift
+```
 
 **Primary method signature:**
 
