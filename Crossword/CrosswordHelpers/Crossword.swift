@@ -131,6 +131,7 @@ extension Array where Element == [String] {
         return result
     }
     
+    /// O(N) where N is the number of cells in this matrix. 
     func prettyPrint() {
         for row in self {
             print(row)
