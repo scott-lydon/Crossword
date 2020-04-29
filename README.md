@@ -1,17 +1,13 @@
-# Crossword: A crossword puzzle algorithm for the (S N A P interview)
+## Crossword: A crossword puzzle algorithm for the (S N A P interview)
 
 **Provides a typealias for a matrix of Strings.**  
 
 ```Swift
+typealias Crossword = [[String]]
 ```
 
-**Primary method signature:**
 
-```Swift
-func answer(for words: [String]) -> Crossword
-```
-
-**light weight syntax:**
+**Easy to use:**
 
 ```Swift
 let crossword = [
