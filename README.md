@@ -3,7 +3,7 @@ A crossword puzzle algorithm for the (S N A P interview)
 
 Provides a typeAlias for a matrix of Strings.  
 
-Primary method signature: 
+**Primary method signature:**
 
 ```Swift
 func answer(for words: [String]) -> Crossword
