@@ -17,7 +17,7 @@ class ViewController: UIViewController {
             ["T", "R", "A"],
             ["E", "A", "T"],
         ]
-        print(crossword.answer(for: ["CAT", "EAR", "W"]))
+        crossword.answer(for: ["CAT", "EAR", "W"]).prettyPrint()
     }
 }
 

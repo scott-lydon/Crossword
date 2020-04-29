@@ -131,5 +131,10 @@ extension Array where Element == [String] {
         return result
     }
     
+    func prettyPrint() {
+        for row in self {
+            print(row)
+        }
+    }
     
 }
