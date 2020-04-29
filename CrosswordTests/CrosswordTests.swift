@@ -39,6 +39,7 @@ class CrosswordTests: XCTestCase {
     
     var inputOutputs: [InputOutput<Crossword, [String], Crossword>] = [
         InputOutput(input: [], input2: [], output: []),
+        // case with a single letter word matching and a non matching word and a multi letter word that matches.
         InputOutput(input: [
             ["W", "P", "C"],
             ["T", "R", "A"],
@@ -48,6 +49,7 @@ class CrosswordTests: XCTestCase {
             ["", "", "A"],
             ["", "", "T"],
         ]),
+        // case with only a single letter word matching, and excluding a word that exceeds the bounds of the matrix
         InputOutput(input: [
             ["W", "P", "C"],
             ["T", "R", "A"],
@@ -57,6 +59,119 @@ class CrosswordTests: XCTestCase {
             ["", "", ""],
             ["", "", ""],
         ]),
+        // Recommended case
+        InputOutput(input: [
+            ["W", "P", "C"],
+            ["T", "R", "A"],
+            ["E", "A", "T"],
+        ], input2: ["CAT", "EAR"], output: [
+            ["", "", "C"],
+            ["", "", "A"],
+            ["", "", "T"],
+        ]),
+        // Empty crossword
+        InputOutput(input: [], input2: ["CAT", "EAR"], output: []),
+        // Empty input
+        InputOutput(input: [
+            ["W", "P", "C"],
+            ["T", "R", "A"],
+            ["E", "A", "T"],
+        ], input2: [], output: [
+            ["", "", ""],
+            ["", "", ""],
+            ["", "", ""],
+        ]),
+        // multiple matches
+        InputOutput(input: [
+            ["W", "P", "C"],
+            ["T", "R", "A"],
+            ["E", "A", "T"],
+        ], input2: ["WTE", "WRT", "PRA", "CRE"], output: [
+            ["W", "P", "C"],
+            ["T", "R", ""],
+            ["E", "A", "T"],
+        ]),
+        // a match going up
+        InputOutput(input: [
+            ["W", "P", "C"],
+            ["T", "R", "A"],
+            ["E", "A", "T"],
+        ], input2: ["ETW"], output: [
+            ["W", "", ""],
+            ["T", "", ""],
+            ["E", "", ""],
+        ]),
+        // a match going down
+        InputOutput(input: [
+            ["W", "P", "C"],
+            ["T", "R", "A"],
+            ["E", "A", "T"],
+        ], input2: ["PRA"], output: [
+            ["", "P", ""],
+            ["", "R", ""],
+            ["", "A", ""],
+        ]),
+        // a match going right
+        InputOutput(input: [
+            ["W", "P", "C"],
+            ["T", "R", "A"],
+            ["E", "A", "T"],
+        ], input2: ["TRA"], output: [
+            ["", "", ""],
+            ["T", "R", "A"],
+            ["", "", ""],
+        ]),
+        // a match going left
+        InputOutput(input: [
+            ["W", "P", "C"],
+            ["T", "R", "A"],
+            ["E", "A", "T"],
+        ], input2: ["ART"], output: [
+            ["", "", ""],
+            ["T", "R", "A"],
+            ["", "", ""],
+        ]),
+        // a match going up left
+        InputOutput(input: [
+            ["W", "P", "C"],
+            ["T", "R", "A"],
+            ["E", "A", "T"],
+        ], input2: ["TRW"], output: [
+            ["W", "", ""],
+            ["", "R", ""],
+            ["", "", "T"],
+        ]),
+        // a match going up right
+        InputOutput(input: [
+            ["W", "P", "C"],
+            ["T", "R", "A"],
+            ["E", "A", "T"],
+        ], input2: ["ERC"], output: [
+            ["", "", "C"],
+            ["", "R", ""],
+            ["E", "", ""],
+        ]),
+        // a match going down left
+        InputOutput(input: [
+            ["W", "P", "C"],
+            ["T", "R", "A"],
+            ["E", "A", "T"],
+        ], input2: ["CRE"], output: [
+            ["", "", "C"],
+            ["", "R", ""],
+            ["E", "", ""],
+        ]),
+        // a match going down right
+        InputOutput(input: [
+            ["W", "P", "C"],
+            ["T", "R", "A"],
+            ["E", "A", "T"],
+        ], input2: ["WRT"], output: [
+            ["W", "", ""],
+            ["", "R", ""],
+            ["", "", "T"],
+        ]),
+        
     ]
     
     
