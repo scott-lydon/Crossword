@@ -15,8 +15,12 @@ let crossword = [
     ["T", "R", "A"],
     ["E", "A", "T"],
 ]
-print(crossword.answer(for: ["CAT", "EAR", "W"]))
+crossword.answer(for: ["CAT", "EAR", "W"]).prettyPrint()
 
-// [["W", "", "C"], ["", "", "A"], ["", "", "T"]]
+/*
+["W", "", "C"]
+["", "", "A"]
+["", "", "T"]
+*/
 
 ```
