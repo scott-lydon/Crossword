@@ -16,8 +16,7 @@ let crossword = [
     ["E", "A", "T"],
 ]
 print(crossword.answer(for: ["CAT", "EAR", "W"]))
-/* Output: 
 
-[["W", "", "C"], ["", "", "A"], ["", "", "T"]]
-*/
+// [["W", "", "C"], ["", "", "A"], ["", "", "T"]]
+
 ```
