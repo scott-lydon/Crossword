@@ -111,6 +111,7 @@ extension Array where Element == [String] {
     ///   K: is the number of characters in each of those words
     ///  Worst case: O(N*W*K)
     ///  Best Case: O(N)
+    /// If no words are given, an empty matrix will be returned with an equal size as the inputted matrix.  If an empty matrix is given an empty matrix will be returned. 
     func answer(for words: [String]) -> Crossword {
         var result = Crossword(emptyCopy: self)
         words.forEach { word in
@@ -129,4 +130,6 @@ extension Array where Element == [String] {
         }
         return result
     }
+    
+    
 }
